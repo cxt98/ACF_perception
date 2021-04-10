@@ -1,7 +1,7 @@
 # Manipulation-Oriented Object Perception in Clutter through Affordance Coordinate Frames
 Created by Xiaotong Chen, Kaizhi Zheng, Zhen Zeng, Shreshtha Basu, James Cooney, Jana Pavlasek and Odest Chadwicke Jenkins from 
 [Laboratory For Progress, the University of Michigan](https://progress.eecs.umich.edu/index.html).  
-This is a pytorch implementation of the paper: [Paper link](https://arxiv.org/abs/2010.08202), [Video link]().
+This is a pytorch implementation of the paper: [Paper link](https://arxiv.org/abs/2010.08202), [Video link](https://youtu.be/Z7AwKXmwXaI).
 
 ## Requirement
 The code has been tested with 
@@ -37,23 +37,26 @@ python3 test.py --resume endpoints_attention
 
 ## Running robot experiment in CoppeliaSim platform
 
-Download CoppeliaSim simulator at https://www.coppeliarobotics.com/downloads (version 4.1.0).
+Download CoppeliaSim simulator at [here](https://www.coppeliarobotics.com/downloads) (tested in version 4.1.0).
 The simulator is free of 3rd libraries, to run it
 ```
 cd PATH_TO_CoppeliaSim
 ./coppeliaSim.sh
 ```
 
-Open the `sim_env.ttt` scene in `File/Open Scene...`, you will be able to see a tabletop scene setting.
+Open the `simulator/sim_env.ttt` scene in `File/Open Scene...`, you will be able to see a tabletop scene setting.
 
 Run robot experiment after setting appropriate parameters in `simulator/main.py`
 ```
 python3 simulator/main.py
 ```
 
+If you want to use random texture for objects, we provide some sample textures [here](https://drive.google.com/file/d/1FwILIEZ9VrX7HSvWRNmS04xOw3jmajTy/view?usp=sharing). 
+Extract and put this folder to path `simulator/texture`. Feel free to add or delete textures in the folder.
+
 The robot manipulation code has two parts, one is in `simulator/robot.py`, including API calls to Coppeliasim, interface to perception network,
 calculation of end-effector poses for grasping and manipulation, and utility functions. Another is in Coppeliasim scene file `remoteApiCommandServer` file and written in lua, 
 including API calls to manipulator IK, motion planning, scene object setup, grasping, etc.
 
-For more debug information related to robot simulator, refer to CoppeliaSim official website https://www.coppeliarobotics.com/
- and forum https://forum.coppeliarobotics.com/.
+For more debug information related to robot simulator, refer to CoppeliaSim [official website](https://www.coppeliarobotics.com/)
+ and [forum](https://forum.coppeliarobotics.com/).
