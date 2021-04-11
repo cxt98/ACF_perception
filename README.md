@@ -1,7 +1,7 @@
 # Manipulation-Oriented Object Perception in Clutter through Affordance Coordinate Frames
 Created by Xiaotong Chen, Kaizhi Zheng, Zhen Zeng, Shreshtha Basu, James Cooney, Jana Pavlasek and Odest Chadwicke Jenkins from 
 [Laboratory For Progress, the University of Michigan](https://progress.eecs.umich.edu/index.html).  
-This is a pytorch implementation of the paper: [Paper link](https://arxiv.org/abs/2010.08202), [Video link](https://youtu.be/Z7AwKXmwXaI).
+This is a pytorch implementation of the paper: [Paper link](https://arxiv.org/abs/2010.08202), [Video link](https://youtu.be/7P9_O9wveYk).
 
 ## Requirement
 The code has been tested with 
